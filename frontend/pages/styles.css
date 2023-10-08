@@ -1,0 +1,85 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 60px; /* Para acomodar a barra de navegação fixa */
+    background-image: url('../images/beautiful_forest.jpeg');
+    color: white;
+}
+
+main {
+    min-height: 48vh;
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+    background-color: rgba(0, 0, 0); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-color 0.3s;
+
+    .navbar-brand {
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    .navbar-brand:hover {
+        color: greenyellow;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: greenyellow;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+/* Estilo para rodapé */
+footer {
+    background-color: rgba(0, 0, 0, 0.4); 
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card h1 {
+    color: white;
+}
+
+.form-floating {
+    color: gray;
+}
+
+.participantes img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100%;
+}
+
+.sobreItem {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 1.1rem;
+    border-radius: 10px;
+}
+
