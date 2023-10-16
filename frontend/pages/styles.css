@@ -1,8 +1,10 @@
 /* Estilos gerais */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 60px; /* Para acomodar a barra de navegação fixa */
+    margin-top: 60px;
+    /* Para acomodar a barra de navegação fixa */
     background-image: url('../images/beautiful_forest.jpeg');
+    background-attachment: fixed;
     color: white;
 }
 
@@ -12,7 +14,7 @@ main {
 
 /* Estilo para a barra de navegação */
 .navbar {
-    background-color: rgba(0, 0, 0); 
+    background-color: rgba(0, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     transition: background-color 0.3s;
@@ -48,12 +50,12 @@ main {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Estilo para rodapé */
 footer {
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -61,6 +63,8 @@ footer {
 
 .card {
     background-color: rgba(0, 0, 0, 0.8);
+    margin: 1rem;
+    color: white;
 }
 
 .card h1 {
@@ -83,3 +87,91 @@ footer {
     border-radius: 10px;
 }
 
+.atlas .card {
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.atlas main {
+    border-radius: 10px;
+    background-color: #efefef;
+    padding: 20px;
+}
+
+.atlas .card img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#filterButton {
+    padding: 5px 50px 5px 50px;
+}
+
+.spText {
+    color: rgb(103, 103, 103)
+}
+
+.modal-body label,
+.modal-title {
+    color: black;
+    font-weight: bold;
+}
+
+.list-group-item-heading {
+    cursor: pointer;
+}
+
+.conta {
+    color: white;
+}
+
+#profileImage {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#imageItem {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.plantas img {
+    width: 99%;
+    height: 360px;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+
+    .spanGenero,
+    .spanFamilia {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .sciName {
+        display: none;
+    }
+
+    #profileImage {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+.contaModais {
+    color: black;
+}
+
+.plantas .card {
+    align-items: center;
+    padding: 5px;
+}
+
+
+.plantas .card .card-text  {
+    font-weight: bold;
+}

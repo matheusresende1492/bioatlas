@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioAtlas - Plataforma de Biodiversidade</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="conta.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BioAtlas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="plantas.html">Plantas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atlas.html">Atlas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conta.html">Conta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 conta">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Conta</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="profilePicture"><strong>Foto de Perfil:</strong></label>
+                                    <input type="file" class="form-control-file" id="profilePicture" accept="image/*">
+                                    <img id="profileImage" src="../images/mightguy.jpeg" class="mt-2 img-thumbnail"
+                                        alt="Profile Picture">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="fullName"><strong>Nome Completo:</strong></label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Seu Nome Completo">
+                                    <span id="fullName_input_alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password_input"><strong>Nova Senha:</strong></label>
+                                    <input type="password" class="form-control" id="password_input" placeholder="Sua Senha">
+                                    <span id="password_input_alert"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="saveChanges" data-bs-toggle="modal" data-bs-target="#saveModalSuccess">Salvar Alterações</button>
+                        <button class="btn btn-danger" id="deleteAccount"  data-bs-toggle="modal" data-bs-target="#deleteModal">Excluir Conta</button>
+                        <button class="btn btn-secondary" id="deleteAccount">Sair da Conta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="contaModais">
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>Tem certeza que deseja deletar sua conta?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModalSuccess">Deletar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal fade" id="deleteModalSuccess" tabindex="-1" aria-labelledby="deleteModalLabelSuccess" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>Conta deletada com sucesso</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="saveModalSuccess" tabindex="-1" aria-labelledby="saveModalLabelSuccess" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>Suas alterações foram salvas com sucesso!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2023 BioAtlas - Todos os direitos reservados.</p>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
