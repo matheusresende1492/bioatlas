@@ -75,18 +75,4 @@ function updateCardList() {
 
 document.addEventListener("DOMContentLoaded", function () {
     updateCardList();
-    document.getElementById('imgItem').addEventListener('change', function (e) {
-        var profileImage = document.getElementById('imageItem');
-        var file = e.target.files[0];
-
-        if (file) {
-            var reader = new FileReader();
-            reader.onload = function () {
-                profileImage.src = reader.result;
-            }
-            reader.readAsDataURL(file);
-        } else {
-            profileImage.src = 'default-profile-image.jpg';
-        }
-    });
 });
